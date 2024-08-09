@@ -9,16 +9,16 @@ on:
 
 jobs:
   build:
-  runs-on: ubuntu-latest
-  steps:
-    - name: checkout code
-      uses: actions/checkout@v3
-    - name: Setup JDK
-      uses: actions/setup-java@v3
-      with:
-        java-version : '22'
-        distribution : 'temurin'
-    - name : Build
-      run : mvn clean install
-    - name : Run tests
-      run : mvn test
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v3
+      - name: Setup JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version : '22'
+          distribution : 'temurin'
+      - name : Build
+        run : mvn clean install
+      - name : Run tests
+        run : mvn test
