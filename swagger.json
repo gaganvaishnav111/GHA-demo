@@ -1,0 +1,56 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "API Documentation",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/tasks/{task_id}": {
+      "get": {
+        "summary": "Get task by ID",
+        "parameters": [
+          {
+            "name": "task_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Task details"
+          },
+          "404": {
+            "description": "Task not found"
+          }
+        }
+      }
+    },
+    "/api/projects/{project_id}": {
+      "get": {
+        "summary": "Get project by ID",
+        "parameters": [
+          {
+            "name": "project_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Project details"
+          },
+          "404": {
+            "description": "Project not found"
+          }
+        }
+      }
+    }
+  },
+  "swagger": "2.0"
+}
