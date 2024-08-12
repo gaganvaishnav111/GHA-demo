@@ -33,7 +33,7 @@ jobs:
           echo “RUN ID = ${{github.run_id}}”
           echo “User = ${{github.actor}}”
       - name: Upload jar to Github
-        if: ${{contains(github.actor,'gaganvaishnav')}}
+        if: ${{contains(github.actor,'saranya')}}
         uses: actions/upload-artifact@v3
         with:
           name: myapp-jar
